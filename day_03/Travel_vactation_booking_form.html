@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Set-4</title>
+</head>
+<style>
+     {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 40px 20px;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #dbeafe, #f0f9ff);
+        color: #333;
+    }
+
+    h2 {
+        width: 600px;
+        max-width: 100%;
+        margin: 0 auto 10px;
+        text-align: center;
+        color: #1e3a8a;
+        font-size: 28px;
+    }
+
+    hr {
+        width: 600px;
+        max-width: 100%;
+        margin: 0 auto 25px;
+        border: none;
+        border-top: 2px solid #bfdbfe;
+    }
+
+    form {
+        width: 600px;
+        max-width: 100%;
+        margin: auto;
+        padding: 30px;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    form>div {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-size: 15px;
+        font-weight: 600;
+        color: #374151;
+    }
+
+    /* Text, email, phone, number and date inputs */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="date"],
+    textarea {
+        display: block;
+        width: 100%;
+        margin-top: 7px;
+        padding: 11px 12px;
+        border: 1px solid #d1d5db;
+        border-radius: 7px;
+        font-size: 14px;
+        outline: none;
+        transition: 0.2s;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    input[type="number"]:focus,
+    input[type="date"]:focus,
+    textarea:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+    }
+
+    /* Checkbox and radio buttons */
+    input[type="checkbox"],
+    input[type="radio"] {
+        margin-left: 10px;
+        cursor: pointer;
+        accent-color: #2563eb;
+    }
+
+    input[type="checkbox"]+label,
+    input[type="radio"]+label {
+        margin-left: 4px;
+        cursor: pointer;
+    }
+
+    /* Textarea */
+    textarea {
+        resize: vertical;
+        min-height: 80px;
+    }
+
+    /* Buttons */
+    button {
+        padding: 11px 25px;
+        border: none;
+        border-radius: 7px;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-right: 8px;
+        transition: 0.2s;
+    }
+
+    button[type="submit"] {
+        background-color: #2563eb;
+        color: white;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #1d4ed8;
+        transform: translateY(-1px);
+    }
+
+    button[type="reset"] {
+        background-color: #e5e7eb;
+        color: #374151;
+    }
+
+    button[type="reset"]:hover {
+        background-color: #d1d5db;
+        transform: translateY(-1px);
+    }
+
+    /* Terms section */
+    form>div:nth-last-child(2) {
+        padding: 12px;
+        background-color: #f8fafc;
+        border-radius: 7px;
+    }
+
+    /* Mobile */
+    @media (max-width: 650px) {
+        body {
+            padding: 25px 15px;
+        }
+
+        form {
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 23px;
+        }
+    }
+
+</style>
+
+<body>
+    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/SSKVgrwhzus?si=4h8kegiUekP5v5pb"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+
+
+    <h2>Travel Vacation Booking Form</h2>
+
+    <hr>
+    <form action="/submit.php">
+        <div>
+            <label for="fullname"> Full Name: </label>
+            <input id="fullname " type="text" placeholder="Enter Your Name">
+        </div>
+
+        <div>
+            <label for="email"> Email: </label>
+            <input id="email" type="email" placeholder="Enter Email">
+        </div>
+        <div>
+            <label for="phone"> Phone: </label>
+            <input id="phone" type="tel" placeholder="Enter Phone">
+        </div>
+        <div>
+            <label for="">Destination: </label>
+
+            <input id="destination" type="checkbox" name="activity" value="Shimla">
+            <label for="destination">Shimla</label>
+
+            <input id="manali" type="checkbox" name="activity" value="Manali">
+            <label for="manali">Manali</label>
+        </div>
+
+        <div>
+            <label for="traveler">Number of Travellers: </label>
+            <input id="traveler" type="number">
+        </div>
+        <div>
+            <label for="departure">Departure Date</label>
+            <input type="date">
+        </div>
+        <div>
+            <label for="return">Return Date</label>
+            <input type="date" name="">
+        </div>
+        <div>
+            <label for="">Travel Class: </label>
+
+            <input id="ac" type="radio" name="class" value="AC">
+            <label for="ac">AC</label>
+
+            <input id="nac" type="radio" name="class" value="Non AC">
+            <label for="nac">Non AC</label>
+
+        </div>
+        <div>
+            <label for="">Comment: </label>
+            <textarea name="" id="" placeholder="Enter Your Request" rows="3"></textarea>
+
+        </div>
+
+        <div>
+            <label for="term">I am satisfied with  <a href="https://www.termsfeed.com/blog/sample-terms-and-conditions-template/">Term & Condition</a>  </label>
+            <input id="term" type="checkbox">
+        </div>
+        <span>
+            <button type="submit">Submit</button>
+        </span>
+        <span>
+            <button type="reset">Reset</button>
+        </span>
+    </form>
+</body>
+
+</html>

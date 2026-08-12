@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form: Takes input from user</title>
+    <style>
+       
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 40px 20px;
+        font-family: Arial, sans-serif;
+        background-color: #f4f6f8;
+    }
+
+    form {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 30px;
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    form > div {
+        margin-bottom: 22px;
+    }
+
+    p {
+        margin: 0 0 10px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    label {
+        font-size: 15px;
+        color: #333;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+        margin-right: 6px;
+        cursor: pointer;
+    }
+
+    input[type="radio"] + label {
+        margin-right: 18px;
+        cursor: pointer;
+    }
+
+    input[type="checkbox"] + label {
+        cursor: pointer;
+    }
+
+    textarea {
+        display: block;
+        width: 100%;
+        margin-top: 8px;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        resize: vertical;
+        outline: none;
+    }
+
+    textarea:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 4px rgba(0, 123, 255, 0.2);
+    }
+
+    button {
+        padding: 10px 20px;
+        margin-right: 10px;
+        border: none;
+        border-radius: 6px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    button[type="submit"] {
+        background-color: #007bff;
+        color: white;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+    button[type="reset"] {
+        background-color: #6c757d;
+        color: white;
+    }
+
+    button[type="reset"]:hover {
+        background-color: #545b62;
+    }
+</style>
+    </style>
+</head>
+<body>
+    <form action="/submit.php">
+        <div>
+            <label for="name">Name: </label>
+            <input id="name" type="text" placeholder="Enter Your Name">
+        </div>
+        <div>
+            <label for="address"> Address:</label>
+            <input id="address" type="text" placeholder="Enter Your Address">
+        </div>
+        <div>
+            <label for="phone"> Phone: </label>
+            <input id="phone" type="tel" placeholder="Phone Number">
+        </div>
+        <div>
+            <label for="email">Email: </label>
+            <input id="emai" type="email" placeholder="Enter your Email">
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input id="password" type="password" placeholder="Enter Your Password">
+        </div>
+        <div>
+            <label for="dateofbirth">Date of Birth: </label>
+            <input id="dateofbirth" type="date" placeholder="Enter Your DOB">
+        </div>
+        <div>
+            <label for="gender">Gender: </label>
+             <select  id="gender" required>
+                <option value="" disabled selected>Select Gender</option>
+             <option value="male">Male</option>
+             <option value="female">Female</option>
+             <option value="others">Prefer not to Say</option>
+             </select>
+        </div>
+        <div>
+            <p>Subscription Plan: </p>
+            <input id="basic" type="radio" name="subscription" value="basic">
+            <label for="basic">Basic</label>
+        
+            <input id="vip" type="radio" name="subscription" value="vip">
+            <label for="vip">VIP</label>
+            
+            <input id="premium" type="radio" name="subscription" value="premium">
+            <label for="premium">Premium</label>
+        </div>
+        <div>
+            <input id="term" type="checkbox" required>
+            <label for="term">I agree to the Term & Condition</label>
+        </div>
+        <div>
+            <label for="area">Comments</label>
+            <textarea name="" id="area" placeholder="Enter comments Here" rows="4"></textarea>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+    <div>
+        <video src="video.mp4.mp4" muted controls height="140"></video>
+    </div>
+
+</body>
+</html>
