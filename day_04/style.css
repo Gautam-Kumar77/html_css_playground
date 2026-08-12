@@ -1,0 +1,19 @@
+p{
+    color: blueviolet;
+}
+
+#a123{
+    background-color: palevioletred;
+}
+
+.paraClass{
+background-color: antiquewhite;
+}
+
+p,article{
+width: 500px;
+}
+
+p.paraClass{
+    text-align: center;
+}
